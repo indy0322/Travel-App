@@ -25,7 +25,7 @@ window.onload = function () {
     longitude = coords.longitude;
 
     $('#map-container').children('iframe').css('display', 'none')
-    var placeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyAmdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&q=${latitude},${longitude}&zoom=${zoomData}`
+    var placeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&q=${latitude},${longitude}&zoom=${zoomData}`
     $('.map').attr('src', placeSrc)
     $('.default').css('display', 'block')
   }
@@ -34,7 +34,7 @@ window.onload = function () {
 $('#place-searchButton').click(() => {
   searchPlace = placeSearch.value;
   $('#mapType').val('normalMap')
-  var placeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyAmdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&q=${searchPlace}&zoom=${zoomData}`
+  var placeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyAHSd-H0-Tgufv85nQO5bNYW-69Xw44&q=${searchPlace}&zoom=${zoomData}`
   $('.map').attr('src', placeSrc)
 })
 
@@ -42,17 +42,17 @@ $('#map-zoom').change(() => {
   $('#zoom-value').html("확대 범위 (" + $('#map-zoom').val() + ")")
   if ($('#mapType').val() == 'default' || $('#mapType').val() == 'normalMap') {
     if (searchPlace != null) {
-      var placeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyAmdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&q=${searchPlace}&zoom=${$('#map-zoom').val()}`
+      var placeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSycHSd-H0-Tgufv85nQO5bNYW-69Xw44&q=${searchPlace}&zoom=${$('#map-zoom').val()}`
     }
     else if (searchPlace == null) {
-      var placeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyAmdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&q=${latitude},${longitude}&zoom=${$('#map-zoom').val()}`
+      var placeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&q=${latitude},${longitude}&zoom=${$('#map-zoom').val()}`
     }
   }
   else if ($('#mapType').val() == 'viewMap') {
-    var placeSrc = `https://www.google.com/maps/embed/v1/view?key=AIzaSyAmdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&center=${latitude},${longitude}&zoom=${$('#map-zoom').val()}&maptype=satellite`
+    var placeSrc = `https://www.google.com/maps/embed/v1/view?key=AIzyAmdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&center=${latitude},${longitude}&zoom=${$('#map-zoom').val()}&maptype=satellite`
   }
   else if ($('#mapType').val() == 'directionMap') {
-    var placeSrc = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyAmdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&origin=${originPlace}&destination=${destinationPlace}&zoom=${$('#map-zoom').val()}&mode=transit`
+    var placeSrc = `https://www.google.com/maps/embed/v1/directions?key=AIzaAmdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&origin=${originPlace}&destination=${destinationPlace}&zoom=${$('#map-zoom').val()}&mode=transit`
   }
   $('.map').attr('src', placeSrc)
 })
@@ -63,7 +63,7 @@ $('#currentButton').click(() => {
   destinationPlace = null
   $('#place-search').val('')
   $('#mapType').val('default')
-  var placeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyAmdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&q=${latitude},${longitude}&zoom=${zoomData}`
+  var placeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyAcHSd-H0-Tgufv85nQO5bNYW-69Xw44&q=${latitude},${longitude}&zoom=${zoomData}`
   $('.map').attr('src', placeSrc)
 })
 
@@ -73,7 +73,7 @@ $('#currentButton2').click(() => {
   destinationPlace = null
   $('#place-search').val('')
   $('#mapType').val('default')
-  var placeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyAmdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&q=${latitude},${longitude}&zoom=${zoomData}`
+  var placeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSydcHSd-H0-Tgufv85nQO5bNYW-69Xw44&q=${latitude},${longitude}&zoom=${zoomData}`
   $('.map').attr('src', placeSrc)
   $('#origin-destination-container').css('display', 'none')
   $('#pathButton-container').css('display', 'none')
@@ -86,7 +86,7 @@ $('#path-searchButton').click(() => {
   destinationPlace = destinaiton.value
   console.log(originPlace)
   console.log(destinationPlace)
-  var placeSrc = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyAmdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&origin=${originPlace}&destination=${destinationPlace}&zoom=${zoomData}&mode=transit`
+  var placeSrc = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyAcHSd-H0-Tgufv85nQO5bNYW-69Xw44&origin=${originPlace}&destination=${destinationPlace}&zoom=${zoomData}&mode=transit`
   $('.map').attr('src', placeSrc)
 })
 
@@ -98,7 +98,7 @@ $('#path-searchButton').click(() => {
 $('#mapType').change(() => {
   if ($('#mapType').val() == 'default' || $('#mapType').val() == 'normalMap') {
     $('#map-container').children('iframe').css('display', 'none')
-    var placeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyAmdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&q=${latitude},${longitude}&zoom=${zoomData}`
+    var placeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyAcHSd-H0-Tgufv85nQO5bNYW-69Xw44&q=${latitude},${longitude}&zoom=${zoomData}`
     $('.map').attr('src', placeSrc)
     $('.default').css('display', 'block')
     $('#origin-destination-container').css('display', 'none')
@@ -108,7 +108,7 @@ $('#mapType').change(() => {
   }
   else if ($('#mapType').val() == 'viewMap') {
     $('#map-container').children('iframe').css('display', 'none')
-    var placeSrc = `https://www.google.com/maps/embed/v1/view?key=AIzaSyAmdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&center=${latitude},${longitude}&zoom=${zoomData}&maptype=satellite`
+    var placeSrc = `https://www.google.com/maps/embed/v1/view?key=AIzaSyAcHSd-H0-Tgufv85nQO5bNYW-69Xw44&center=${latitude},${longitude}&zoom=${zoomData}&maptype=satellite`
     $('.map').attr('src', placeSrc)
     $('.viewMap').css('display', 'block')
     $('#origin-destination-container').css('display', 'none')
@@ -118,7 +118,7 @@ $('#mapType').change(() => {
   }
   else if ($('#mapType').val() == 'directionMap') {
     $('#map-container').children('iframe').css('display', 'none')
-    var placeSrc = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyAmdcHSd-H0-Tgufv85nQO5bNYW-69Xw44&origin=${latitude},${longitude}&destination=${latitude},${longitude}&zoom=${zoomData}`
+    var placeSrc = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyAmHSd-H0-Tgufv85nQO5bNYW-69Xw44&origin=${latitude},${longitude}&destination=${latitude},${longitude}&zoom=${zoomData}`
     $('.map').attr('src', placeSrc)
     $('.directionMap').css('display', 'block')
     $('#origin-destination-container').css('display', 'block')

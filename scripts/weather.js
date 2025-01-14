@@ -16,12 +16,12 @@ countryPosition.addEventListener('keyup',(event)=>{
         event.preventDefault();
         $('#weatherTable-container').css('display','block')
         $('#searchWeather').css('margin-top','0%')
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${countryPosition.value}&appid=6e2116fd4990f3c0833cad0b431ba1f4&units=metric`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${countryPosition.value}&appid=e2116990f3c0833cad0b431ba1f4&units=metric`)
         .then(async (data) => await data.json())
         .then((data) => {
             //weatherTemperature.value = data.main.temp
             //weatherImage.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
-            fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=6e2116fd4990f3c0833cad0b431ba1f4&units=metric`)
+            fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=e2116f0f3c0833cad0b431ba1f4&units=metric`)
                 .then(async (res) => await res.json())
                 .then((res)=>{
                     //weatherTemperature.value = res.current.temp
@@ -49,12 +49,12 @@ countryPosition.addEventListener('keyup',(event)=>{
     
 })
 /*weatherSearchButton.addEventListener('click',() => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${countryPosition.value}&appid=6e2116fd4990f3c0833cad0b431ba1f4&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${countryPosition.value}&appid=e2116fdf3c0833cad0b431ba1f4&units=metric`)
     .then(async (data) => await data.json())
     .then((data) => {
         //weatherTemperature.value = data.main.temp
         //weatherImage.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
-        fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=6e2116fd4990f3c0833cad0b431ba1f4&units=metric`)
+        fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=e2116f990f3c0833cad0b431ba1f4&units=metric`)
             .then(async (res) => await res.json())
             .then((res)=>{
                 //weatherTemperature.value = res.current.temp
